@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Test - Delete</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <button onclick="deleteCar()">Delete car</button>
+        <div id="output"></div>
+        <script>
+            function deleteCar(){
+                 var car = {"reg":"11 MO 1234"}
+                     console.log(JSON.stringify(car));
+                     $.ajax({
+                         "url": "http://127.0.0.1:5000/cars/"+encodeURI(car.reg),
+                         "method":"DELETE",
+                         "data":"",
+                         "dataType": "JSON",
+                         contentType: "application/json; charset=utf-8",
+                         "success":function(result){
+                             console.log(result);
+                             document.getElementById("output").innerText = JSON.stringify(result);
+                             },
+                         "error":function(xhr,status,error){
+                             console.log("error: "+status+" msg:"+error);
+                             }
+                 });
+             }
+        </script>
+    </body>
+</html>
