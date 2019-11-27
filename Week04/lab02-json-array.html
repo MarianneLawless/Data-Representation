@@ -8,9 +8,13 @@
     <script>
         function displayJSON(){
             var obj = JSON.parse('{"employees": [{"firstName": "John", "lastName": "Doe"},{ "firstName": "Anna","lastName": "Smith"},{"firstName": "Peter","lastName": "Jones"}]}')
-            for (employee of obj.employees){
+           for (employee of obj.employees){
                 console.log(employee.firstName)
             }
-        }
+           // employees.array.forEach(employee =>{
+             //   console.log(employee.lastName);
+
+            }
+        
     </script>
 </html>
