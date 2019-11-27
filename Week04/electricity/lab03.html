@@ -1,0 +1,50 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.
+min.js"></script>
+	<title>Lab 03</title>
+	</head>
+	<body>
+		<table>
+		<tr>
+			<th>Currency</th>
+			<th>Rate</th> 
+		</tr>
+		<tr>
+			<td>Euro</td>
+			<td id="eur"></td>
+		</tr>
+		<tr>
+			<td>US Dollars</td>
+			<td id="usd"></td>
+		</tr>
+		<tr>
+			<td>British Pound</td>
+			<td id="pound"></td>
+		</tr>
+		</table></div>
+		<button onclick="readJSON()">Click for latest rates</button>
+	</body>
+	<script>
+	function readJSON(){
+		$.ajax({
+			"url": "https://api.coindesk.com/v1/bpi/currentprice.json ",
+			"method":"GET",
+			"data":"",
+			"dataType": "JSON",
+			"success":function(result){
+			//console.log(result);
+			var erate = result.bpi.EUR.rate
+			var usrate = result.bpi.USD.rate
+			var poundrate = result.bpi.GBP.rate
+			document.getElementById("eur").innerText = erate;
+			document.getElementById("usd").innerText = usrate;
+			document.getElementById("pound").innerText = poundrate;
+			},
+			"error":function(xhr,status,error){
+				console.log("error: "+status+" msg:"+error);
+			}
+		});
+	}
+	</script>
+</html>
