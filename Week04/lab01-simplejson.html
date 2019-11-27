@@ -1,10 +1,15 @@
 <html>
-    <head>
-        <title>simple json</title>
-    </head>
-    <script>
-        var obj = JSON.parse('{ "isbn": 1234567, "Author": "Andrew Beatty","Title" : "the emptness of ping-pong balls"}')
-        console.log(obj.Title)
-    
-    </script>
+	<head>
+		<title>Lab01</title>
+	</head>
+	<body>
+	<input type="button" value="Show Author in Console" onclick="jsonconvert()">
+	</body>
+	<script>
+	function jsonconvert(){
+		var obj = JSON.parse('{"ISBN": 1234567, "Author": "Andrew Beatty", "Title": "The Emptiness of Ping-Pong Balls"}')
+	
+		console.log(obj.Author)
+	}
+	</script>
 </html>
