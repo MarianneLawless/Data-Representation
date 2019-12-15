@@ -1,0 +1,22 @@
+{
+    "cars": [
+        {
+            "make": "Ford",
+            "model": "Mondeo",
+            "price": 18000,
+            "reg": "181 G 1234"
+        },
+        {
+            "make": "Nissan",
+            "model": "Micra",
+            "price": 8000,
+            "reg": "11 MO 1234"
+        },
+        {
+            "make": "Toyota",
+            "model": "Yaris",
+            "price": 600,
+            "reg": "171 D 4321"
+        }
+    ]
+}
