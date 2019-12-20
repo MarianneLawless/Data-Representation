@@ -1,4 +1,4 @@
-# Data-Representation labs done on all the following weeks
+# Data-Representation labs from Week 1-10 inclusive
 Data Representation Course Work
 •	52957 -- DATA REPRESENTATION
 
